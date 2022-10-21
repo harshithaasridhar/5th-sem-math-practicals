@@ -1,0 +1,21 @@
+from sympy import *
+from sympy.abc import *
+q=expand((x+i*y)**3)
+f=q.subs([(i**2,-1),(i**3,-i)])
+u=f.coeff(i,0)
+v=f.coeff(i,1)
+print(u)
+print(v)
+a=diff(u,x,2)
+b=diff(v,x,2)
+c=diff(u,y,2)
+d=diff(v,y,2)
+if a+c==0:
+    print("the fun u is harmonic")
+else:
+    print("the fun is not harmonic")
+if b+d==0:
+    print("the fun v is harmonic")
+else:
+    print("the function v is not harmonic")
+
