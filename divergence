@@ -1,0 +1,8 @@
+from sympy import *
+from sympy.abc import x,y,z
+def divergence(f1,f2,f3):
+    print("divergence is " , diff(f1,x)+diff(f2,y)+diff(f3,z))
+f1=2*x**2*y
+f2=3*x
+f3=4*x*z
+divergence(f1,f2,f3)
